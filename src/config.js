@@ -5,6 +5,7 @@ const { release } = require('./package.json');
 module.exports.RELEASE = release;
 module.exports.PORT = process.env.PORT || 51821;
 module.exports.PASSWORD = process.env.PASSWORD;
+module.exports.BASEPATH = ( process.env.BASEPATH || '' ).replace( /^([^\/])/, '/$1' ).replace( /\/$/, '' );
 module.exports.WG_PATH = process.env.WG_PATH || '/etc/wireguard/';
 module.exports.WG_HOST = process.env.WG_HOST;
 module.exports.WG_PORT = process.env.WG_PORT || 51820;

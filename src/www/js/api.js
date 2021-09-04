@@ -3,10 +3,13 @@
 
 'use strict';
 
+const BASEPATH = window.BASEPATH === '<!--BASEPATH-->' ? '' : window.BASEPATH;
+delete window.BASEPATH;
+
 class API {
 
   async call({ method, path, body }) {
-    const res = await fetch(`/api${path}`, {
+    const res = await fetch(`${BASEPATH}/api${path}`, {
       method,
       headers: {
         'Content-Type': 'application/json',

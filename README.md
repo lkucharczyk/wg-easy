@@ -80,6 +80,7 @@ These options can be configured in `docker-compose.yml` under `environment`.
 | Env | Default | Example | Description |
 | - | - | - | - |
 | `PASSWORD` | - | `foobar123` | When set, requires a password when logging in to the Web UI. |
+| `BASEPATH` | - | `foobar123` | Path prefix for the Web UI. |
 | `WG_HOST` | - | `vpn.myserver.com` | The public hostname of your VPN server |
 | `WG_PORT` | `51820` | `51820` | The public UDP port of your VPN server |
 | `WG_PERSISTENT_KEEPALIVE` | `0` | `25` | Value in seconds to keep the "connection" open |
